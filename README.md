@@ -5,7 +5,7 @@ Ewatomi is a beauty salon website that is optimized to convert to leads to payin
 https://ewatomi.netlify.app/
 
 
-![gif of ewatomi beauty salon website](https://media.giphy.com/media/TkfN9V88el2dFxxBBZ/giphy.gif)
+![gif of ewatomi beauty salon website](https://media.giphy.com/media/gwbGjDfNBcuZfFRVyo/giphy.gif)
 
 ## How It's Made:
 
