@@ -1,0 +1,802 @@
+/* Box Model Hack */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  /* display: grid; */
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Navigation Bar */
+
+header {
+  background-color: #019875;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.navBar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 1.5rem;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 55px;
+}
+
+.navBranding {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: white;
+  font-weight: 700;
+  padding: 0 10px;
+}
+
+.navLink {
+  transition: 0.7s ease;
+}
+
+.navLink:hover {
+  color: brown;
+}
+
+
+
+/* MOBILE MENU DESIGN */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+/* SECTIONS */
+main {
+  height: 800px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(./assets/coverpic.jpg);
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.overlapSection {
+  background: #002408;
+  color: white;
+  width: 20%;
+  height: 280px;
+  margin: -50px 0 0 150px;
+}
+.overlapSection .visit {
+  padding: 30px 20px 10px 30px;
+  font-size: 2rem;
+}
+
+.threeSections,
+.threeStaffs {
+  height: 600px;
+  padding: 80px 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.leftSection,
+.middleSection,
+.rightSection {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.momentumSection {
+  background: #019875;
+  padding: 70px 100px 40px 200px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.momentumSection .leftSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* padding-right: 400px; */
+}
+.momentumVideo {
+  margin: 50px 10px;
+  border: 2px solid #002408;
+  background-image: url(./assets/salon.jpeg);
+  background-size: 500px 300px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.threeStaffs {
+  height: 900px;
+  text-align: center;
+}
+.staff {
+  padding: 40px 20px;
+  position: relative;
+}
+.staff figure img {
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.staff figure:hover img {
+  -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+.threeStaffs img {
+  width: 427px;
+  height: 640px;
+}
+.staffNameBox {
+  background: #002408;
+  color: white;
+  height: 100px;
+  width: 300px;
+  padding: 2px;
+  position: absolute;
+  margin: -50px 60px 20px 60px;
+  z-index: 100;
+}
+
+.colourSection {
+  height: 500px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(./assets/coloredhair.jpg);
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.lookbookSection {
+  height: 1000px;
+  --gap: 16px;
+  --num-cols: 5;
+  --row-height: 400px;
+
+  box-sizing: border-box;
+  padding: var(--gap);
+
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+.lookbookSection figure:hover img {
+  -webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+.lookbookSection figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+}
+.lookbookSection img:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.lookbookSection img:nth-child(2) {
+  grid-column: span 2;
+}
+.lookbookSection img:nth-child(10) {
+  grid-column: span 2;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 50px;
+  color: #fff;
+  background-color: #002408;
+  font-size: 1.25rem;
+}
+.footer > * {
+  flex:  1 100%;
+} 
+.footerBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.leftFooter {
+  margin-right: 1.094rem;
+  margin-bottom: 1.75rem;
+  padding: 20px 0 10px 20px;
+  width: 35%;
+  /* border: 2px solid white; */
+}
+.leftFooter .navBranding {
+  color: #B8293D;
+  padding: 10px 0;
+}
+.leftFooter p {
+  padding: 30px 80px 0 0;
+  line-height: 2rem;
+}
+.rightFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 65%;
+  padding: 30px 0;
+}
+.rightFooter > * {
+  flex: 1 50%;
+}
+
+.bottomFooter {
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid white;
+  font-size: 1.2rem;
+}
+.footer h2 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  padding-bottom: 2rem;
+}
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+.footer li {
+  line-height: 2rem;
+}
+.footer a {
+  text-decoration: none;
+}
+.box a {
+  color: white;
+}
+.h-box {
+  column-count: 2;
+  column-gap: 4rem;
+}
+  
+  
+
+/* HEADINGS & PARAGRAPHS */
+.mainSection h1 {
+  padding: 200px 1000px 0 150px;
+  font-size: 8rem;
+  font-weight: 500;
+}
+.mainSection h3 {
+  font-size: 2.5rem;
+  padding: 0 1400px 30px 150px;
+}
+.overlapSection p {
+  padding: 20px 20px 10px 30px;
+  font-size: 2.5rem;
+}
+.overlapSection p b {
+  font-size: 4rem;
+}
+.threeSections h4 {
+  font-size: 2.5rem;
+  padding: 20px 0;
+  color: #002408;
+}
+.threeSections p {
+  font-size: 2rem;
+  color: #002408;
+}
+.momentumSection .leftSection h2 {
+  padding: 0 20px 20px 20px;
+  line-height: 30px;
+  font-size: 4rem;
+  text-align: left;
+}
+.momentumSection .leftSection p {
+  padding: 30px 100px 50px 20px;
+  line-height: 40px;
+  font-size: 2.5rem;
+  text-align: left;
+}
+.threeStaffs h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.threeStaffs h4 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.threeStaffs h3,
+.threeStaffs h4 {
+  padding: 10px 0;
+  z-index:999;
+}
+
+.colourSection h4 {
+  font-size: 2.5rem;
+  padding: 100px 0 30px 200px;
+}
+.colourSection h2 {
+  font-size: 4rem;
+  padding: 0 1200px 20px 200px;
+  line-height: 60px;
+}
+.colourSection h2 b {
+  font-size: 6rem;
+}
+.lookbookTitle {
+  font-size: 4.5rem;
+  text-align: center;
+  padding: 80px 0 50px 0;
+}
+
+
+/* BUTTONS */
+button {
+  border-color: #B8293D;
+  background: #B8293D;
+  padding: 10px 20px;
+}
+.navBarButton {
+  background: none;
+  color: black;
+  border-radius: 2rem;
+  border-color: white;
+  font-size: 2rem;
+}
+.mainSection .servicesButton {
+  margin: 20px 0 0 150px;
+  color: white;
+  font-size: 2rem;
+}
+.overlapSection .bookingButton {
+  margin: 30px 20px 0 30px;
+  background: white;
+  border-color: white;
+  font-size: 2rem;
+}
+.momentumSection .leftSection .readButton {
+  margin: 5px 20px 0 20px;
+  background: #B8293D;
+  color: white;
+  font-size: 2rem;
+  align-self: flex-start;
+}
+.colourSection .colourButton {
+  margin: 10px 0 0 200px;
+  padding: 10px;
+  background: #B8293D;
+  color: white;
+  font-size: 2rem;
+}
+
+/* ICONS */
+.makeup,
+.chair,
+.cream {
+  width: 80px;
+  height: 80px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/******************************************
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 767px){
+  /* Mobile Devices & Low Resolution Tablets */
+
+  /* Mobile Hamburger Menu */
+  .hamburger {
+    display: block;
+    order: 1;
+  }
+  .hamburger.active  .bar:nth-child(2){
+      opacity: 0;
+  }
+  .hamburger.active  .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active  .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  .navMenu {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #019875;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+  }
+  .navItem {
+      margin: 16px 0;
+  }
+  .navMenu.active {
+      left: 0;
+  }
+  .navBranding {
+    order: 2;
+    padding: 0;
+  }
+  .navBarButton {
+    order: 3;
+    font-size: 1.25rem;
+  }
+
+  /* SECTIONS */
+  main {
+    background-size: 820px;
+  }
+  .overlapSection {
+    width: 320px;
+    height: 300px;
+    margin: -220px 0 0 30px;
+  }
+
+  .threeSections {
+    height: 1100px;
+    padding: 100px 20px 80px 20px;
+    flex-direction: column;
+  }
+  .leftSection,
+  .middleSection,
+  .rightSection {
+    padding: 20px 0px;
+  }
+
+  .momentumSection {
+    padding: 70px 30px 40px 30px;
+    height: 1000px;
+    flex-direction: column;
+  }
+  .momentumVideo {
+    height: 400px;
+    width: 300px;
+  }
+
+  .threeStaffs {
+    height: 1800px;
+    padding: 30px 20px 80px 20px;
+    flex-direction: column;
+  }
+  .threeStaffs img {
+    width: 300px;
+    height: 450px;
+  }
+  .staffNameBox {
+  height: 100px;
+  width: 250px;
+  margin: -50px 20px 20px 20px;
+}
+  .colourSection {
+    height: 400px;
+    background-size: 500px;
+  }
+  .lookbookSection {
+    height: 1100px;
+    --num-cols: 2;
+    --row-height: 150px;
+  }
+  .lookbookSection img:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .lookbookSection img:nth-child(2) {
+    grid-column: span 1;
+  }
+  .footerBox {
+    flex-direction: column;
+    flex-basis: 2;
+  }
+  .leftFooter {
+    padding-left: 0;
+    width: 100%;
+  }
+  .rightFooter {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+  }
+  .h-box {
+    padding-bottom: 30px;
+    column-gap: 7rem;
+  }
+
+  /* HEADINGS AND PARAGRAPHS */
+  .mainSection h1 {
+    padding: 50px 50px 0 30px;
+    font-size: 5.5rem;
+  }
+  .mainSection h3 {
+    font-size: 2.25rem;
+    padding: 10px 80px 30px 30px;
+    line-height: 30px;
+  }
+  .overlapSection p {
+    font-size: 2rem;
+  }
+  .threeSections h4 {
+    font-size: 2.25rem;
+  }
+  .threeSections p {
+    font-size: 1.8rem;
+  }
+  .momentumSection .leftSection h2 {
+    padding: 0 0 20px 20px;
+    line-height: 40px;
+    font-size: 3.25rem;
+  }
+  .momentumSection .leftSection p {
+    padding: 30px 20px 25px 30px;
+    line-height: 40px;
+    font-size: 2rem;
+    text-align: left;
+  }
+  .threeStaffs h3 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .threeStaffs h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  }
+  .colourSection h4 {
+    font-size: 1.5rem;
+    padding: 50px 0 30px 20px;
+  }
+  .colourSection h2 {
+    font-size: 3.25rem;
+    padding: 0 0 20px 20px;
+    line-height: 50px;
+  }
+  .colourSection h2 b {
+    font-size: 5.5rem;
+  }
+  .lookbookTitle {
+    font-size: 3.25rem;
+    padding: 30px 0 50px 0;
+  }
+  .leftFooter p {
+    padding: 20px 10px 0 0;
+  }
+  
+  /* BUTTONS */
+  .mainSection .servicesButton {
+    margin: 10px 0 0 30px;
+  }
+  .colourSection .colourButton {
+    margin: 10px 0 0 20px;
+  }
+}
+
+/* Tablets Ipads portrait mode */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet Hamburger Menu */
+  .hamburger {
+    display: block;
+    order: 1;
+  }
+  .hamburger.active  .bar:nth-child(2){
+      opacity: 0;
+  }
+  .hamburger.active  .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active  .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  .navMenu {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #019875;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+  }
+  .navItem {
+      margin: 16px 0;
+  }
+  .navMenu.active {
+      left: 0;
+  }
+  .navBranding {
+    order: 2;
+    padding: 0;
+  }
+  .navBarButton {
+    order: 3;
+    font-size: 1.25rem;
+  }
+  /* SECTIONS */
+  .overlapSection {
+    width: 300px;
+    height: 300px;
+    margin-top: -80px;
+  }
+  .threeSections,
+  .threeStaffs {
+    height: 450px;
+    padding: 40px 80px;
+  }
+  .leftSection,
+  .middleSection,
+  .rightSection {
+    padding: 30px 20px;
+  }
+  .momentumSection {
+    padding: 50px 70px 40px 80px;
+    height: 550px;
+  }
+  .momentumVideo {
+    width: 300px;
+    height: 300px;
+  }
+  .threeStaffs {
+    height: 600px;
+  }
+
+  .threeStaffs img {
+    width: 300px;
+    height: 400px;
+  }
+  .staffNameBox {
+    margin: -50px 20px 20px 15px;
+    height: 100px;
+    width: 270px;
+  }
+  .h-box {
+    column-gap: 2rem;
+  }
+
+  /* HEADINGS */
+  .mainSection h3 {
+    padding-right: 500px;
+  }
+  .threeSections p {
+    font-size: 1.8rem;
+  }
+  .momentumSection .leftSection h2 {
+    line-height: 50px;
+  }
+  .momentumSection .leftSection p {
+    font-size: 1.8rem;
+  }
+  .colourSection h4 {
+    padding-left: 80px;
+  }
+
+  .colourSection h2 {
+    padding: 0 500px 20px 80px;
+    line-height: 60px;
+  }
+
+  /* BUTTONS */
+  .colourSection .colourButton {
+    margin-left: 80px;
+  }
+}
+
+/* Laptops, Desktops and larger screens */
+@media only screen and (min-width: 1025px) and (max-width: 1919px){
+
+  /* SECTIONS */
+  .overlapSection {
+    width: 400px;
+    height: 300px;
+    margin-top: -30px;
+  }
+  .threeSections,
+  .threeStaffs {
+    height: 450px;
+    padding: 40px 80px;
+  }
+  .leftSection,
+  .middleSection,
+  .rightSection {
+    padding: 30px 20px;
+  }
+  .momentumSection {
+    padding: 50px 70px 40px 80px;
+    height: 550px;
+  }
+  .momentumVideo {
+    width: 300px;
+    height: 300px;
+  }
+  .threeStaffs {
+    height: 600px;
+  }
+
+  .threeStaffs img {
+    width: 300px;
+    height: 400px;
+  }
+  .staffNameBox {
+    margin: -50px 20px 20px 15px;
+    height: 100px;
+    width: 270px;
+  }
+
+   /* HEADINGS */
+  .mainSection h3 {
+    padding-right: 700px;
+  }
+  .threeSections p {
+    font-size: 1.8rem;
+  }
+  .momentumSection .leftSection h2 {
+    line-height: 50px;
+  }
+  .momentumSection .leftSection p {
+    font-size: 1.8rem;
+  }
+  .colourSection h4 {
+    padding-left: 80px;
+  }
+
+  .colourSection h2 {
+    padding: 0 600px 20px 80px;
+    line-height: 60px;
+  }
+   /* BUTTONS */
+   .colourSection .colourButton {
+    margin-left: 80px;
+  }
+}
+
+
+
