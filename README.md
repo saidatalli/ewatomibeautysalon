@@ -20,3 +20,9 @@ I would like to integrate a booking system, e-commerce page and payment processo
 ## Lessons Learned:
 
 I experienced some difficulties when I was making the image gallery for the lookbook section. I learnt to ask for help when stuck. I wasn't familiar with grid so I asked for help on Discord. I also used resources on YouTube and Google to learn more about the grid system.
+
+## My other projects:
+Take a look at other projects that I have in my porfolio
+**Halal Meals:** https://github.com/saidatalli/halalmeals
+**Sunshine Nursery:** https://github.com/saidatalli/sunshinenursery
+**Taste of Africa:** https://github.com/saidatalli/tasteofafrica
