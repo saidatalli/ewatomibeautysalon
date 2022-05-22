@@ -2,10 +2,10 @@
 Ewatomi is a beauty salon website that is optimized to convert to leads to paying customers and sell beauty products and/or services. There are various action buttons as well as 2 discounts to encourage new clients to buy from Ewatomi.
 
 **Link to project:** 
-https://ewatomi.netlify.app/
+https://ewatomibeautysalon.netlify.app
 
 
-![gif of ewatomi beauty salon website](https://media.giphy.com/media/gwbGjDfNBcuZfFRVyo/giphy.gif)
+![picture of ewatomi beauty salon website](https://github.com/saidatalli/ewatomibeautysalon/blob/main/ewatomi_beauty_salon_laptop_view.png)
 
 ## How It's Made:
 
