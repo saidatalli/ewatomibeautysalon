@@ -98,7 +98,7 @@ main {
   position: relative;
 }
 
-.custom-shape-divider-bottom-1658833488 {
+.wave-bg {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -108,14 +108,14 @@ main {
   transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1658833488 svg {
+.wave-bg svg {
   position: relative;
   display: block;
   width: calc(146% + 1.3px);
   height: 182px;
 }
 
-.custom-shape-divider-bottom-1658833488 .shape-fill {
+.wave-bg .shape-fill {
   fill: #FFFFFF;
 }
 
