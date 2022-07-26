@@ -95,20 +95,48 @@ main {
   background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.custom-shape-divider-bottom-1658833488 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1658833488 svg {
+  position: relative;
+  display: block;
+  width: calc(146% + 1.3px);
+  height: 182px;
+}
+
+.custom-shape-divider-bottom-1658833488 .shape-fill {
+  fill: #FFFFFF;
 }
 
 .overlapSection {
+  position: absolute;
   background: #002408;
   color: white;
   width: 20%;
   height: 280px;
-  margin: -50px 0 0 150px;
+  top: 750px;
+  left: 150px;
+  z-index: 1;
 }
 .overlapSection .visit {
   padding: 30px 20px 10px 30px;
   font-size: 2rem;
 }
 
+.threeSections {
+  margin-top: 200px;
+}
 .threeSections,
 .threeStaffs {
   height: 600px;
@@ -481,12 +509,15 @@ button {
   .overlapSection {
     width: 320px;
     height: 300px;
-    margin: -220px 0 0 30px;
+    /* margin: -220px 0 0 30px; */
+    top: 550px;
+    left: 30px;
   }
 
   .threeSections {
     height: 1100px;
-    padding: 100px 20px 80px 20px;
+    margin-top: 100px;
+    padding: 0 20px 80px 20px;
     flex-direction: column;
   }
   .leftSection,
@@ -518,13 +549,13 @@ button {
   height: 100px;
   width: 250px;
   margin: -50px 20px 20px 20px;
-}
+  }
   .colourSection {
     height: 400px;
     background-size: 500px;
   }
   .lookbookSection {
-    height: 1100px;
+    height: 1000px;
     --num-cols: 2;
     --row-height: 150px;
   }
@@ -665,7 +696,8 @@ button {
   .overlapSection {
     width: 300px;
     height: 300px;
-    margin-top: -80px;
+    top: 730px;
+    left: 150px;
   }
   .threeSections,
   .threeStaffs {
